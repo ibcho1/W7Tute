@@ -70,7 +70,7 @@ app.get('/additem/:whId/:name/:cost/:quantity', function (req, res){
 app.get('/getitems', function(req, res){
     Item.find().populate('warehouse').exec(function (err, data){
         data = JSON.stringify(data, null, 4);
-        res.send('<pre>${data}</pre>');
+        res.send('<pre> ${data} </pre>');
     })
 });
 
