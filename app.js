@@ -56,7 +56,7 @@ app.get('/additem/:whId/:name/:cost/:quantity', function (req, res){
         name: req.params.name,
         cost: req.params.cost,
         quantity: req.params.quantity,
-        warehouse: whId //mongoose.; //////; req.params.whId,
+        warehouse: mongoose.Schema.Types.ObjectId, //////; req.params.whId,
     }, function(err){
         if(err){
             console.log("Unable to create item");
